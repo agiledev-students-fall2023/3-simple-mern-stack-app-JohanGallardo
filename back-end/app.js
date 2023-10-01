@@ -78,5 +78,17 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+const data = {
+  image: 'https://drive.google.com/uc?export=view&id=1t9MOOvLvE5n1lM8p9oaNV-2r769rQx55',
+  paragraph:
+    "Hi, my name is Johan Gallardo and I am New York. I was born in Queens Hospital and Queens is where I was raised and reside. I am the youngest of six siblings which was both amazing and terrible. The street I grew up one in Jamaica, Queens was never quiet and there was never a dull moment. Growing up I had many pets including two dogs, two cat, chicks, and a rabbit. Animals were my biggest interest as a child but I have not had a pet in a long time now. In middle school I was placed into a computer class where I learned the very basics of computers and the web. There I found out that I wanted my future career to surround computers and then web. Now, I am studying Computer Science but also have an interest in Psychology.",
+}
+
+app.get('/about-us', (req, res) => {
+  res.json(data)
+})
+
+
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
